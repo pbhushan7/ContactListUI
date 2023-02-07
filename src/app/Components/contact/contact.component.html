@@ -1,0 +1,25 @@
+<div class="container my-5">
+    <h3 >CONTACT LIST</h3>
+    <table class="table" *ngIf="contacts && contacts.length > 0">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let contact of contacts" >
+            <td>{{contact.id}}</td>
+            <td>{{contact.firstName}}</td>
+            <td>{{contact.lastName}}</td>
+            <td>{{contact.address}}</td>
+            <td>{{contact.number}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p *ngIf="!contacts || contacts.length <=0">No Contacts Found !!</p>
+    </div>
+    
